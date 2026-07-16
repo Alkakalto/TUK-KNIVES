@@ -1,0 +1,718 @@
+/* ==========================================================
+
+                        TUK-KNIVES
+
+                    MAIN STYLE SHEET
+
+-------------------------------------------------------------
+
+INNEHÅLL
+
+RESET
+    *
+
+GENERAL SETTINGS
+    body
+
+GLOBAL CONTAINER
+    .container
+
+HEADER
+    header
+    header .container
+
+LOGO
+    .logo
+
+NAVIGATION MENU
+    nav
+    nav a
+    nav a:hover
+    nav a::after
+    nav a:hover::after
+
+MOBILE MENU BUTTON
+    .menu-btn
+
+HERO SECTION
+    .hero
+    .overlay
+    .overlay h2
+    .overlay p
+
+ABOUT SECTION
+    .about
+    .about h2
+    .about p
+    .about button
+    .about button:hover
+
+PRODUCTS SECTION
+    .products
+
+CUSTOM ORDER SECTION
+    .custom
+    .custom ul
+
+BUTTONS
+    button
+    .about button
+    .custom button
+    button:hover
+
+PRODUCT CARDS
+    .cards
+    .card
+
+FOOTER
+    footer
+    .footer-grid
+    footer a
+    footer a:hover
+
+RESPONSIVE DESIGN
+    @media (max-width:768px)
+
+========================================================== */
+
+
+/* ================================================== */
+/*                     RESET                           */
+/* ================================================== */
+/*
+    Grundinställningar för hela hemsidan.
+*/
+
+*{
+
+    margin:0;
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+/* ================================================== */
+/*                  GENERAL SETTINGS                  */
+/* ================================================== */
+/*
+    Standardinställningar för hela sidan.
+*/
+
+body{
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:#fafafa;
+
+    color:#333;
+
+    line-height:1.6;
+
+}
+
+
+/* ================================================== */
+/*                  GLOBAL CONTAINER                  */
+/* ================================================== */
+/*
+    Bestämmer sidans maxbredd.
+*/
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+
+/* ================================================== */
+/*                     HEADER                         */
+/* ================================================== */
+/*
+    Översta delen av hemsidan.
+
+    Innehåller:
+    - Logotyp
+    - Meny
+    - Mobilmeny
+*/
+
+header{
+
+    background:#fff;
+
+    height:85px;
+
+    box-shadow:0 2px 10px rgba(0,0,0,.08);
+
+}
+
+
+/* Container inuti headern */
+
+header .container{
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 30px;
+
+}
+
+
+/* ================================================== */
+/*                     LOGO                           */
+/* ================================================== */
+
+.logo{
+
+    margin:0;
+
+    font-family:"Open Sans Condensed", sans-serif;
+
+    font-size:clamp(1.4rem, 4vw, 2.3rem);
+
+    font-weight:600;
+
+    letter-spacing:.5px;
+
+    color:#0d2c54;
+
+    text-transform:uppercase;
+
+}
+
+
+/* ================================================== */
+/*                 NAVIGATION MENU                    */
+/* ================================================== */
+
+nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:35px;
+
+    z-index:1001;
+
+}
+
+
+/* Varje menylänk */
+
+nav a{
+
+    font-family:"Open Sans", sans-serif;
+
+    position:relative;
+
+    letter-spacing:1px;
+    
+    text-decoration:none;
+
+    color:#001c3bfb;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+
+/* Hoverfärg */
+
+nav a:hover{
+
+    color:#000000bf;
+
+}
+
+
+/* Linjen under länken */
+
+nav a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:2px;
+
+    background:#000000bf;
+
+    transition:.40s;
+
+}
+
+
+/* Animation */
+
+nav a:hover::after{
+
+    width:100%;
+
+}
+
+
+/* ================================================== */
+/*                 MOBILE MENU BUTTON                 */
+/* ================================================== */
+
+.menu-btn{
+
+    display:none;
+
+    background:none;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-size:2rem;
+
+    color:#0d2c54;
+
+    
+
+}
+/* ================================================== */
+/*                  HERO SECTION                      */
+/* ================================================== */
+/*
+    Första stora bilden på startsidan.
+
+    Byt bakgrundsbild här.
+*/
+
+
+.hero::before{
+
+  
+  pointer-events:none;
+    
+  content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:30px;
+
+    background:linear-gradient(
+        to bottom,
+        white,
+        rgba(255,255,255,0)
+    );
+
+    pointer-events:none;
+
+}
+
+
+.hero{
+
+    height:31vh;
+
+    background:url("../Media/tuk_background.png") center/cover;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-family:"Oswald", sans-serif;
+    
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+/* Text ovanpå bilden */
+
+.overlay{
+
+    color:white;
+
+    text-align:center;
+
+    padding:40px;
+
+}
+
+
+.overlay h2{
+
+    font-family:"Open Sans Condensed", sans-serif;
+
+    font-size:32px;
+
+    margin-bottom:10px;
+
+}
+
+
+.overlay p{
+
+    font-family:"Open Sans", sans-serif;
+
+    font-size:1rem;
+
+    font-weight:400;
+
+    letter-spacing:2px;
+
+}
+
+/* ================================================== */
+/*                   ABOUT SECTION                    */
+/* ================================================== */
+/*
+    Om oss-sektionen.
+
+    Innehåller:
+    - Rubrik
+    - Brödtext
+    - Knapp
+*/
+
+.about{
+
+    padding:50px 0;
+    
+
+}
+
+
+/* Rubrik */
+
+.about h2{
+
+    font-family:"Open Sans Condensed", sans-serif;
+
+    font-size:2.5rem;
+
+    color:#0d2c54;
+
+    margin-bottom:20px;
+
+}
+
+
+/* Brödtext */
+
+.about p{
+
+    font-family:"Open Sans", sans-serif;
+
+    font-size:1.1rem;
+
+    color:#001d3bbf;
+
+    line-height:1.8;
+
+    max-width:1000px;
+
+}
+
+
+/* Knapp */
+
+.about button{
+
+    margin-top:35px;
+
+    padding:14px 32px;
+
+    background:#094b92;
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-family:"Open Sans", sans-serif;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    display:block;
+
+    margin:35px auto 0;
+
+    border-radius:30px;
+}
+
+
+/* Hover */
+
+.about button:hover{
+
+    background:#1465c7;
+
+}
+
+/* ================================================== */
+/*               PRODUCTS SECTION                     */
+/* ================================================== */
+
+.products{
+
+    padding:70px 0;
+
+}
+
+
+/* ================================================== */
+/*                CUSTOM ORDER SECTION                */
+/* ================================================== */
+
+.custom{
+
+    padding:80px 0;
+
+    background: linear-gradient(rgba(0, 29, 59, 0.8), rgba(0, 29, 59, 0.8)), url("../Media/Worktable.jpeg") center/cover;
+
+    font-family:"Open Sans", sans-serif; color:white; position:center; text-align:center; padding:80px 0;
+
+    
+}
+
+
+.custom ul{
+
+    margin:20px 0;
+
+    padding-left:20px;
+
+}
+
+
+
+/* ================================================== */
+/*                  PRODUCT CARDS                     */
+/* ================================================== */
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:20px;
+
+    margin-top:30px;
+
+}
+
+
+.card{
+
+    background:white;
+
+    padding:25px;
+
+    border-radius:8px;
+
+    box-shadow:0 4px 10px rgba(0,0,0,.1);
+
+}
+
+
+/* ================================================== */
+/*                      FOOTER                        */
+/* ================================================== */
+
+footer{
+
+    background:#111;
+
+    color:white;
+
+    padding:50px 0;
+
+}
+
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+}
+
+
+footer a{
+
+    color:#d6b36b;
+
+    text-decoration:none;
+
+}
+
+
+footer a:hover{
+
+    text-decoration:underline;
+
+}
+
+
+/* ================================================== */
+/*                 RESPONSIVE DESIGN                  */
+/* ================================================== */
+/*
+    Alla ändringar för mobil.
+*/
+
+@media (max-width:768px){
+
+    /* Header */
+
+    header .container{
+
+        flex-direction:row;
+
+    }
+
+    /* Mobilknapp */
+
+    .menu-btn{
+
+        display:block;
+
+    }
+
+    /* Navigation */
+
+    nav{
+
+    display:none;
+
+    position:absolute;
+
+    top:75px;
+
+    right:20px;
+
+    width:220px;
+
+    background:rgba(255,255,255,.85);
+
+    backdrop-filter:blur(12px);
+
+    -webkit-backdrop-filter:blur(12px);
+
+    border-radius:10px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.15);
+
+    overflow:hidden;
+
+    flex-direction:column;
+
+    z-index:1000;
+
+
+
+}
+
+
+
+    nav a{
+
+    width:100%;
+
+    padding:14px 18px;
+
+    text-align:left;
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    letter-spacing:1px;
+
+    border-bottom:1px solid #f0f0f0;
+
+    transition:.2s;
+
+}
+
+
+    nav a:last-child{
+
+    border-bottom:none;
+
+}
+
+    nav a:hover{
+
+    background:#f7f7f7;
+
+    color:#0d2c54;
+
+}
+
+
+    nav.active{
+
+        display:flex;
+
+    }
+
+
+
+    nav a::after{
+
+        display:none;
+
+    }
+
+    /* Hero */
+
+    .overlay h2{
+
+        font-size:35px;
+
+    }
+
+    
+}

@@ -1,0 +1,180 @@
+SSL certifikat aktiverat!(https://misshosting.help/sv/articles/267746-hur-aktiverar-jag-let-s-encrypt-ssl)
+
+
+📅 BUILD SCHEDULE (STEP-BY-STEP)
+🟢 DAY 1 — Setup & Structure
+
+Goal: clean foundation
+
+Create files:
+index.html
+about.html
+custom.html
+knives.html
+style.css
+script.js
+Add same header/navbar to all pages
+Link pages together
+
+👉 Result: You can navigate between pages
+
+
+
+_____________________________________________________
+
+
+
+🟢 DAY 2 — Home Page (MOST IMPORTANT)
+
+Goal: strong first impression
+
+Build:
+
+Hero section (big image + text)
+Short intro
+Preview of knives
+CTA button (“Order Custom Knife”)
+
+👉 This page sells your brand
+
+
+
+____________________________________________________
+
+
+
+🟢 DAY 3 — About Page
+
+Goal: build trust
+
+Add:
+
+Who you are
+Why you make knives
+Materials / philosophy
+
+👉 Keep it short, authentic, not corporate
+
+
+
+____________________________________________________
+
+
+
+🟢 DAY 4 — Knives (Sortiment)
+
+Goal: show products clearly
+
+Build:
+
+Grid layout (you already have this)
+Each knife:
+Image
+Name
+Short description
+Price (or “from X kr”)
+
+👉 No webshop yet — just display
+
+
+
+_______________________________________________________
+
+
+
+🟢 DAY 5 — Custom Orders Page
+
+Goal: get leads
+
+Add:
+
+Simple explanation:
+“I create custom knives based on your needs”
+Examples (images)
+Form:
+Name
+Email
+Message (what they want)
+
+👉 This is where money starts
+
+
+
+____________________________________________________
+
+
+
+🟢 DAY 6 — Design Polish
+
+Goal: make it look premium
+
+Fix spacing (important)
+Improve typography
+Add hover effects
+Make images consistent
+
+👉 This step separates amateur vs serious brand
+
+
+
+_____________________________________________________
+
+
+
+🟢 DAY 7 — Mobile Optimization
+
+Goal: works on phone (VERY important)
+
+Test in browser dev tools
+Fix:
+Text size
+Grid stacking
+Menu spacing
+
+👉 70% of users are mobile
+
+
+
+____________________________________________________
+
+
+
+
+🟢 DAY 8 — Content Upgrade
+
+Goal: make it feel real
+
+Replace all placeholder text
+Use real knife images
+Add real descriptions
+
+👉 This is where your site becomes legit
+
+
+
+
+________________________________________________________
+
+
+
+🟢 DAY 9 — Basic SEO + Finish
+
+Goal: be findable
+
+Add <title> per page
+Add meta description
+Use proper headings (h1, h2)
+
+
+
+_______________________________________________________
+
+
+
+🟢 DAY 10 — Launch Ready
+
+Goal: ready for hosting
+
+Clean code
+Test all links
+Upload to Miss Hosting
