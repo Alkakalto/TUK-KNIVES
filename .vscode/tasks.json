@@ -1,0 +1,23 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "TUK: Starta lokal webbplats",
+      "type": "process",
+      "command": "${input:phpExecutable}",
+      "args": ["-S", "127.0.0.1:8765", "-t", ".", "dev/router.php"],
+      "options": {"cwd": "${workspaceFolder}"},
+      "problemMatcher": [],
+      "presentation": {"reveal": "always", "panel": "dedicated"}
+    },
+    {
+      "label": "TUK: Kontrollera PHP-filer",
+      "type": "process",
+      "command": "${input:phpExecutable}",
+      "args": ["dev/check.php"],
+      "options": {"cwd": "${workspaceFolder}"},
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [{"id": "phpExecutable", "type": "promptString", "description": "PHP-program (php om det finns i PATH, annars full sökväg till php.exe)", "default": "php"}]
+}

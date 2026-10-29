@@ -1,0 +1,14 @@
+/uploads/*
+!/uploads/.htaccess
+/tuk-config.php
+*.log
+/.env
+/.env.*
+!/.env.example
+/config.local.php
+/config.production.php
+*.sql.gz
+*.sql.zip
+/backups/
+/work/
+/outputs/

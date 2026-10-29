@@ -1,0 +1,42 @@
+name: Kontrollera webbplatsen
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  php-and-database:
+    runs-on: ubuntu-24.04
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_ROOT_PASSWORD: local-ci-password
+          MYSQL_DATABASE: tuk_test
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping -h 127.0.0.1 --silent"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=10
+    env:
+      TUK_CONFIG: ${{ github.workspace }}/tests/ci-config.php
+      TUK_RUN_TESTS: '1'
+      TUK_TEST_DB_PASSWORD: local-ci-password
+    steps:
+      - uses: actions/checkout@v4
+      - name: Installera PHP-testberoenden
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y php-cli php-mysql php-mbstring php-gd php-xml
+      - name: Kontrollera PHP och JavaScript
+        run: |
+          php dev/check.php
+          node --check assets/shop.js
+          node --check EN/Main_index.js
+          node --check assets/custom.js
+      - name: Skapa separat testdatabas och kör integrationstester
+        run: |
+          php tests/import-schema.php
+          php tests/integration.php

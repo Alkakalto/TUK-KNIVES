@@ -22,6 +22,7 @@
 
     <!-- Huvud CSS -->
     <link rel="stylesheet" href="Main_style.css">
+    <link rel="stylesheet" href="/assets/shop.css">
 
 </head>
 
@@ -48,7 +49,7 @@
         </h1>
 
         <!-- Mobilmeny -->
-        <button class="menu-btn" id="menu-btn">
+        <button class="menu-btn" id="menu-btn" type="button" aria-controls="navbar" aria-expanded="false" aria-label="Öppna meny">
             ☰
         </button>
 
@@ -57,7 +58,7 @@
 
             <a href="index.html">HEM</a>
             <a href="custom.html"> KNIV PÅ BESTÄLLNING</a>
-            <a href="knives.html">SORTIMENT</a>
+            <a href="/catalog.php">SORTIMENT</a>
             <a href="about.html">OM OSS</a>
 
         </nav>
@@ -115,9 +116,7 @@
 
     </p>
 
-    <button>
-        MER OM OSS
-    </button>
+    <a class="button home-cta" href="/EN/about.html">MER OM OSS</a>
 
 </section>
 
@@ -148,9 +147,7 @@
 
 <br>
 
-        <button_2>
-            BESTÄLL NU
-        </button_2>
+        <a class="button" href="/EN/custom.html">BERÄTTA OM DIN KNIVIDÉ</a>
 
     </div>
 
@@ -166,12 +163,13 @@
 
     För att lägga till en ny produkt:
 
-    Kopiera ett <div class="card">...</div>
+    Använd ägarpanelen på /admin för att lägga till och hantera produkter.
 -->
 
 <section class="products container">
 
     <h2>SORTIMENTET</h2>
+    <p><a class="button" href="/catalog.php">VISA ALLA KNIVAR</a></p>
 
     <div class="cards">
 
@@ -294,7 +292,7 @@
 
             <h3>Instagram</h3>
 
-            <a href="https://instagram.com/tuk_knives" target="_blank">
+            <a href="https://instagram.com/tuk_knives" target="_blank" rel="noopener">
 
                 @tuk_knives
 
@@ -304,6 +302,7 @@
 
     </div>
 
+    <div class="container"><a href="/privacy.php">Integritet</a> · <a href="/admin/">Ägarinloggning</a></div>
 </footer>
 
 
@@ -312,7 +311,7 @@
 <!--      JAVASCRIPT           -->
 <!-- ========================= -->
 
-<script src="Main_index.js"></script>
+<script src="/assets/shop.js"></script>
 
 </body>
 </html>
